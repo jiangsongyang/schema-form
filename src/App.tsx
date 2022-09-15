@@ -7,12 +7,12 @@ function App() {
   const [form] = Form.useForm()
 
   return (
-    <>
+    <div style={{ width: '100vw' }}>
       <SchemaForm schema={schema} form={form} />
       <Button onClick={() => console.log(form.getFieldsValue())}>
         click me to get value
       </Button>
-    </>
+    </div>
   )
 }
 

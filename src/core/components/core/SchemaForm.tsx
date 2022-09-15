@@ -1,7 +1,7 @@
 import { Form } from 'antd'
 import type { FormInstance } from 'antd/es/form'
-import { useCreateFormNode } from '../hooks'
-import type { TSchema } from '../types'
+import { useCreateFormNode } from '../../hooks'
+import type { TSchema } from '../../types'
 
 interface SchemaFormProps {
   schema: TSchema

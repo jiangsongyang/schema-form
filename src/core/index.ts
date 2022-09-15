@@ -1,6 +1,5 @@
 // components
-export * from './SchemaForm'
-export * from './Input'
+export * from './components'
 
 // types
 export * from './types'
