@@ -1,5 +1,11 @@
 import { Input as AntdInput } from 'antd'
 
-export const Input = () => {
-  return <AntdInput />
+interface InputProps {
+  [k: string]: any
+}
+
+export const Input = (props: InputProps) => {
+  const { placeholder, allowClear } = props
+
+  return <AntdInput placeholder={placeholder} allowClear={allowClear} />
 }
