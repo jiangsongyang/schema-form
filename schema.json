@@ -1,0 +1,16 @@
+{
+  "type": "Form",
+  "config": {},
+  "children": [
+    {
+      "type": "Input",
+      "config": {
+        "label": "name",
+        "name": "name",
+        "placeholder": "please input your name",
+        "allowClear": true,
+        "span": 8
+      }
+    }
+  ]
+}
