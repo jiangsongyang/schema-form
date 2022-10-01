@@ -35,17 +35,6 @@ export class JSRunner {
       return res
     }
 
-    // if the data scope in array layout
-    // we should get the value from array layout root
-    if (currentWorkGuard.isInArrayLayout()) {
-      const guardMap = currentWorkGuard._form.manager.getGuardMap()
-      const { arrayFieldIndex, rootArrayLayoutUUID } = currentWorkGuard
-      const arrayLayoutRootGuard = guardMap.get(rootArrayLayoutUUID!)
-
-      const { name: rootName } = arrayLayoutRootGuard?._node?.props || {}
-
-      currentValue = currentWorkGuard._form.getFieldValue(rootName)[arrayFieldIndex!]
-    }
     const value = getValueWithKey(currentValue)
 
     return value
