@@ -7,11 +7,31 @@
       "config": {},
       "children": [
         {
+          "uuid": "1",
           "type": "Input",
           "config": {
             "label": "name",
             "name": "name",
             "placeholder": "please input your name",
+            "allowClear": true,
+            "span": 8
+          },
+          "effects": [
+            {
+              "type": "change",
+              "target": "2",
+              "jsContent": "function _fun_(name) {         return name  }",
+              "action": "calc"
+            }
+          ]
+        },
+        {
+          "uuid": "2",
+          "type": "Input",
+          "config": {
+            "label": "show name",
+            "name": "showName",
+            "placeholder": "",
             "allowClear": true,
             "span": 8
           }
