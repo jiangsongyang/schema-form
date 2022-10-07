@@ -1,6 +1,7 @@
 import React from 'react'
 import type { ReactElement } from 'react'
 import type { TSchema } from '../../types'
+// import component to load it
 import { Input } from '../../components/base'
 import { Row } from '../../components/layout'
 
