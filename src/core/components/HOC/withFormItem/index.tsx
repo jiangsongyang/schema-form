@@ -9,7 +9,6 @@ interface IFormItemProps {
 
 export const withFormItem = (Comp: TComp) => (props: IFormItemProps) => {
   const { name, label, ...rest } = props
-  console.log('name: ', name);
 
   return (
     <Form.Item name={name} label={label}>

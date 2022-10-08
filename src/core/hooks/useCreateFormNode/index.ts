@@ -2,6 +2,7 @@ import React from 'react'
 import type { ReactElement } from 'react'
 import type { TSchema } from '../../types'
 import { Input } from '../../components/base'
+import { Row } from '../../components/layout'
 
 const componentsMap = new Map()
 
@@ -9,6 +10,10 @@ const componentsMap = new Map()
   {
     type: 'Input',
     component: Input,
+  },
+  {
+    type: 'Row',
+    component: Row,
   },
 ].forEach((comp) => {
   componentsMap.set(comp.type, comp.component)

@@ -1,4 +1,17 @@
-目标
+今天在带薪群聊的时候,群里的老哥发了个这张图片
+
+![1663213483345.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b28af116c6d34b5386a495b32fc3af60~tplv-k3u1fbpfcp-watermark.image?)
+
+我就在想,
+
+本文会按照 `最小步骤实现` + `及时重构` 的思想完成基本的配置化渲染功能, 整体思路比较简单, 可放心食用!
+
+
+技术栈 `React` `Antd` `Ts`
+
+# 今日目标
+
+转换json
 ```json
 {
   "type": "Form",
@@ -7,9 +20,11 @@
     {
       "type": "Input",
       "config": {
-        "name": "A",
-        "placeholder": "this is A input placeholder",
-        "allowClear": true
+        "label": "name",
+        "name": "name",
+        "placeholder": "please input your name",
+        "allowClear": true,
+        "span": 8
       }
     }
   ]
@@ -17,10 +32,14 @@
 ```
 变成
 
-todo
+![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/75e8eae04f914c8e85229b597d53f14c~tplv-k3u1fbpfcp-watermark.image?)
 
+可以正常的渲染配置的节点
+可以正常的收集到输入控件的值
 
+我把代码放在了 [(传送门)](https://github.com/jiangsongyang/schema-form) 里 , 如果文章哪里卡住了可以直接去看~
 
+让我们开始动手, 一起撸一个配置化表单吧!
 
 初始化项目
 
@@ -28,7 +47,7 @@ todo
 ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ffd41fb123d84ae8bc897bef45e1acd0~tplv-k3u1fbpfcp-watermark.image?)
 
 
-这东西应该怎么用呢
+设计使用方式
 
 ![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5affc7406bae43bab43f15146a2b80c6~tplv-k3u1fbpfcp-watermark.image?)
 
